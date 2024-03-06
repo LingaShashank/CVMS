@@ -15,7 +15,6 @@ import ContactUs from './components/ContactUs';
 import Login from './components/Login.js';
 import Appointment from './components/Appointment.js';
 import Filter from './components/Filter.js';
-import GitHub from './components/GitHub.js';
 import CounsellorDetails from './components/CounsellorDetails.js';
 import Logout from './components/Logout';
 
@@ -36,7 +35,6 @@ const App = () => {
       <Route path="Login" element={<Login/>} />
       <Route path='Logout' element={<Logout/>} />
       <Route path="Appointment" element={<Appointment/>}/>
-      <Route path='Git' element={<GitHub/>}/>
       <Route path='CounsellorDetails' element={<CounsellorDetails/>}/>
     </Routes><br/>
     <Footer/>
