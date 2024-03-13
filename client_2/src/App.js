@@ -17,6 +17,7 @@ import Appointment from './components/Appointment.js';
 import Filter from './components/Filter.js';
 import CounsellorDetails from './components/CounsellorDetails.js';
 import Logout from './components/Logout';
+import SendMail from './components/SendMail.js'
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
       <Route path='Logout' element={<Logout/>} />
       <Route path="Appointment" element={<Appointment/>}/>
       <Route path='CounsellorDetails' element={<CounsellorDetails/>}/>
+      <Route path='SendMail' element={<SendMail/>}/>
     </Routes><br/>
     <Footer/>
     </AuthProvider>

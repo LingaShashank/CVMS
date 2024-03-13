@@ -10,7 +10,6 @@ export const AuthProvider = (props) => {
   const [accessToken, setAccessToken] = useState(sessionStorage.getItem('accessToken'));
 
   const login = (token) => {
-    console.log("Received access token:", token);
     sessionStorage.setItem('accessToken', token);
     setAccessToken(token);
   };

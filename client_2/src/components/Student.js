@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AddStudent from './Students/AddStudent';
 import StudentsList from './Students/StudentsList';
+import StudentsQR from './Students/StudentsQR';
 
 function samePageLinkNavigation(event) {
   if (
@@ -63,9 +64,11 @@ export default function Student() {
       >
         <LinkTab label="Add Student" href="CRUD/AddStudent" />
         <LinkTab label="Students List" href="CRUD/StudentsList" />
+        <LinkTab label="Students QR" href="CRUD/StudentsQR" />
       </Tabs>
       {value === 0 && <AddStudent />}
       {value === 1 && <StudentsList />}
+      {value === 2 && <StudentsQR /> }
     </Box>
   );
 }
