@@ -23,7 +23,7 @@ export default function StudentsQRCard() {
   }, []);
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} paddingTop={3}>
       {students.map((student) => (
         <Grid item key={student._id} xs={12} sm={6} md={4} lg={3}>
           <Card sx={{ maxWidth: 345 }}>
