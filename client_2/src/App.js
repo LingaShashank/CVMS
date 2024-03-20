@@ -17,7 +17,10 @@ import Appointment from './components/Appointment.js';
 import Filter from './components/Filter.js';
 import CounsellorDetails from './components/CounsellorDetails.js';
 import Logout from './components/Logout';
-import SendMail from './components/SendMail.js'
+import SendMail from './components/SendMail.js';
+import Upload from './components/Upload.js';
+import OtpMail from './components/Otpmail.js';
+import VerifyOtp from './components/VerifyOtp.js';
 
 const App = () => {
   return (
@@ -38,6 +41,9 @@ const App = () => {
       <Route path="Appointment" element={<Appointment/>}/>
       <Route path='CounsellorDetails' element={<CounsellorDetails/>}/>
       <Route path='SendMail' element={<SendMail/>}/>
+      <Route path='Upload' element={<Upload/>} />
+      <Route path='OtpMail' element={<OtpMail />} />
+      <Route path='VerifyOtp' element={<VerifyOtp />} />
     </Routes><br/>
     <Footer/>
     </AuthProvider>

@@ -17,7 +17,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import logo from './Logo.png';
 import { useAuth } from '../Token/AuthContext'; // Import useAuth hook
 
-const pages = ['Home','Parent','ContactUs','Filter','CounsellorDetails','Appointment','Login','Profile','Student','SendMail'];
+const pages = ['Home','Parent','ContactUs','Filter','CounsellorDetails','Appointment','Login','Profile','Student','SendMail','Upload','OtpMail'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
