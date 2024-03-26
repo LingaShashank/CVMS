@@ -13,7 +13,7 @@ function OtpMail() {
         const data = {
             semail
         }
-        await axios.post("http://localhost:3500/api/sendotp",data)
+        await axios.post("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/api/sendotp",data)
         .then(result =>{
             console.log("OTP Sent Succesfully")
             console.log(result)

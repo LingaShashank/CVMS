@@ -24,7 +24,7 @@ function VerifyOtp() {
         console.log(data)
        
         try {
-            const response = await axios.post("http://localhost:3500/api/verifyotp", data);
+            const response = await axios.post("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/api/verifyotp", data);
             console.log(response);
 
             if (response.data.success) {

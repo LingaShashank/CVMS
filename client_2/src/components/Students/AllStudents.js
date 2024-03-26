@@ -11,7 +11,7 @@ const AllStudents = () => {
 };
 
 useEffect(() => {
-  API.get("http://localhost:3500/students/")
+  API.get("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/students/")
     .then((response) => {
       console.log('Success!', response.data);
       setAllStudents(response.data);

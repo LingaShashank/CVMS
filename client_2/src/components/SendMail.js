@@ -24,7 +24,7 @@ function SendMail() {
     };
 
     try {
-      const response = await axios.post("http://localhost:3500/api/sendMail", data);
+      const response = await axios.post("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/api/sendMail", data);
       console.log(response);
     } catch (error) {
       console.log(error);

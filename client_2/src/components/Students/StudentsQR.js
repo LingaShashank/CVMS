@@ -12,7 +12,7 @@ export default function StudentsQRCard() {
   React.useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await API.get('http://localhost:3500/students/');
+        const response = await API.get('https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/students/');
         setStudents(response.data);
       } catch (error) {
         console.error('Error fetching students:', error);
