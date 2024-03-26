@@ -30,10 +30,9 @@ function Upload() {
             </form>
             <p align="center">Reload the page to view data here or Click below link</p>
             <div align="center" >
-                <Link to="/view">View Data Here</Link>
+                <Link to="/Student">View Data Here</Link>
             </div>
             <p align="center">Reload the page to view data here</p>
-            {/* <Viewdata/> */}
         </div>
     );
 }

@@ -12,7 +12,7 @@ const studentmodel = require('./models/student');
 const sendotp = require('./utils/sendotp');
 const useotp = require('./models/userotp'); // Import useotp model
 const genotp = require('./utils/generateotp');
-const user = require('./models/User');
+const userI = require('./models/UserI');
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
@@ -74,8 +74,6 @@ app.post('/api/verifyotp', async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
-//To store files in uploads directory
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "./uploads");
@@ -84,12 +82,10 @@ const storage = multer.diskStorage({
         cb(null, file.originalname);
     }
 });
+app.use('/uploads', express.static('uploads'));
 
-const upload = multer({
-    storage,
-});
+const upload = multer({ storage });
 
-// Route for uploading CSV file
 app.post('/uploadcsv', upload.single("csvFile"), async (req, res) => {
     try {
         const up = await csv().fromFile(req.file.path);
