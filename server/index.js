@@ -13,6 +13,7 @@ const sendotp = require('./utils/sendotp');
 const useotp = require('./models/userotp'); // Import useotp model
 const genotp = require('./utils/generateotp');
 const userI = require('./models/UserI');
+//Testing in vercel
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
