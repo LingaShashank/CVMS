@@ -7,7 +7,7 @@ import "./styles.css";
 const Visitors = () => {
     const [visitors, setVisitors] = useState([]);
     useEffect(() => {
-        axios.get('https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/visitor')
+        axios.get('https://cvms-backend-two.vercel.app/visitor')
         .then((response) => {
             setVisitors(response.data); // Corrected to access response.data
         })
