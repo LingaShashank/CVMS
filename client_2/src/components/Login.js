@@ -27,27 +27,24 @@ export default function Login() {
   const userObj = useContext(AuthContext);
   const navigate = useNavigate(); // Initialize useNavigate
 const handleSubmit = async (event) => {
-  event.preventDefault();
-  try {
-    const response = await axios.post("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/auth/login", credentials);
-    const { token } = response.data; // Update to token
-    console.log(token); // Log token to verify
-    navigate('/home');
-    toast.success("Login successful");
-    userObj.login(token); // Pass token instead of access_token
-    sessionStorage.setItem('accessToken', token); // Store token in sessionStorage
-  } catch (error) {
-    console.error(error);
-    if (error.response && error.response.status === 401) {
-      toast.error("Invalid credentials or user is not active");
-    } else if (error.response) {
-      toast.error("Error: " + error.response.data.message); // Display specific error message from server
-    } else {
-      toast.error("Network Error: Unable to reach the server");
+    event.preventDefault();
+    try {
+        const response = await axios.post("https://cvms-backend-two.vercel.app/auth/login", credentials);
+        const { token } = response.data; // Update to token
+        console.log(token); // Log token to verify
+        navigate('/home');
+        toast.success("Login successful");
+        userObj.login(token); // Pass token instead of access_token
+        sessionStorage.setItem('accessToken', token); // Store token in sessionStorage
+    } catch (error) {
+        console.error(error);
+        if (error.response.status === 401) {
+            toast.error("Invalid credentials or user is not active");
+        } else {
+            toast.error("Error logging in");
+        }
     }
-  }
 };
-
 
 
   const handleInputChange = (e) => {
