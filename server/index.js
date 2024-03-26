@@ -25,7 +25,7 @@ db.once('open', () => {
 });
 
 const corsOptions = {
-    origin: '',
+    origin: 'https://cvms-frontend-five.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 };
 
