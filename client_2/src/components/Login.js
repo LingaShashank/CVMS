@@ -29,7 +29,7 @@ export default function Login() {
 const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const response = await axios.post("https://cvms-backend-two.vercel.app/auth/login", credentials);
+        const response = await axios.post("https://cvms-backend.vercel.app/auth/login", credentials);
         const { token } = response.data; // Update to token
         console.log(token); // Log token to verify
         navigate('/home');

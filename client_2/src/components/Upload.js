@@ -14,7 +14,7 @@ function Upload() {
         const formData = new FormData();
         formData.append('csvFile', selectedFile);
         try {
-            await axios.post("https://cvms-backend-two.vercel.app/uploadcsv", formData);
+            await axios.post("https://cvms-backend.vercel.app/uploadcsv", formData);
             console.log("File uploaded successfully!");
         } catch (error) {
             console.error("Error uploading file:", error);

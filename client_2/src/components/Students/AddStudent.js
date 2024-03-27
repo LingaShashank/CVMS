@@ -27,7 +27,7 @@ export default function AddStudent() {
         event.preventDefault();
         const { ID, name, course, cgpa, mobilenumber, mail } = studentDetails;
         try {
-          const response = await API.post("https://cvms-backend-two.vercel.app/students/",
+          const response = await API.post("https://cvms-backend.vercel.app/students/",
             {
               ID: ID,
               name: name,

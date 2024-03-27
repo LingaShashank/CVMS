@@ -14,7 +14,7 @@ const StudentById = () => {
 
   const handleIdSubmit = async () => { // Remove id parameter from the function declaration
     try {
-      const response = await API.get(`https://cvms-backend-two.vercel.app/students/${id}`);
+      const response = await API.get(`https://cvms-backend.vercel.app/students/${id}`);
       setStudent(response.data);
       console.log(response.data);
       toast.success("Id is Found");

@@ -11,7 +11,7 @@ const AllStudents = () => {
 };
 
 useEffect(() => {
-  API.get("https://cvms-backend-two.vercel.app/students/")
+  API.get("https://cvms-backend.vercel.app/students/")
     .then((response) => {
       console.log('Success!', response.data);
       setAllStudents(response.data);
