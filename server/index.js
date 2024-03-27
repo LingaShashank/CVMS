@@ -17,15 +17,14 @@ const userI = require('./models/UserI');
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
-app.use(cors());
 
 // Connection with DB
 db.once('open', () => {
     console.log('Database connection is open.');
 });
-
+app.use(cors());
 const corsOptions = {
-    origin: '',
+    origin: 'https://cvms-frontend.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 };
 
