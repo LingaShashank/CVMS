@@ -26,11 +26,10 @@ export default function Login() {
   });
   const userObj = useContext(AuthContext);
   const navigate = useNavigate(); // Initialize useNavigate
-
-  const handleSubmit = async (event) => {
+const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const response = await axios.post("https://cvms-backend-fzzqwtrsp-linga-shashanks-projects.vercel.app/auth/login", credentials);
+        const response = await axios.post("https://cvms-backend-two.vercel.app/auth/login", credentials);
         const { token } = response.data; // Update to token
         console.log(token); // Log token to verify
         navigate('/home');
